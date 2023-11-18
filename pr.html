@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>For You</h1>
+    <p id="loveMessage">Message d'amour du jour</p>
+
+    <script>
+        // Liste de messages d'amour
+        var loveMessages = [
+            "Tu es ma lumière.",
+            "Mon amour pour toi est infini.",
+            "Chaque jour avec toi est spécial.",
+            // Ajoutez d'autres messages ici
+        ];
+
+        // Sélectionne un message aléatoire chaque jour
+        var todayMessage = loveMessages[new Date().getDay() % loveMessages.length];
+
+        // Affiche le message sur la page
+        document.getElementById("loveMessage").innerText = todayMessage;
+    </script>
+</body>
+</html>
